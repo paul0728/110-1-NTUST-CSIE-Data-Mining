@@ -1,0 +1,17 @@
+
+class 要nomial才能分類
+numerictonomial
+classify->tree->random tree(自行了解參數意函)
+
+
+問題:
+1.deep learning method 指的是一定要用到cnn嗎?還是一般機器學習的方法系上knn、svm這種也可以
+2.deep learning 也可以用weka做嗎?
+3.adult 資料集有nominal的資料也辦法用CNN做嗎?轉成數值會造成誤差?missing value如何處理?
+4.Spooky Author Identification 看那篇kaggle的講解是要用資訊檢索的方式去做,這有辦法使用上述三種類型˙的方法嗎?
+5.(a)6 組(都取最好的)?
+6.(b)12組?
+7.分兩個資料集討論?
+8.後面沒講要分開資料集就挑一個討論嗎
+9.cycle是指整個演算法跑一次還是Aprior演算法(講義上尋找frequency item set那個）跑一次？
+10.為何指定20Cycle?跑20Cycle意義？

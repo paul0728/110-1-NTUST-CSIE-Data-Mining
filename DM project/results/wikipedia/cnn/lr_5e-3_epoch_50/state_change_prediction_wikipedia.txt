@@ -1,0 +1,8 @@
+
+
+*** Validation performance of epoch 46 ***
+Validation: AUC: 0.7350364860378211
+
+
+*** Test performance of epoch 46 ***
+Test: AUC: 0.6879840522543157

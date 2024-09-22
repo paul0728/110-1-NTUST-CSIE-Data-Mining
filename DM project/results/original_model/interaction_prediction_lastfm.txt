@@ -1,0 +1,10 @@
+
+
+*** Validation performance of epoch 49 ***
+Validation: Mean Reciprocal Rank: 0.32192873429671637
+Validation: Recall@10: 0.45753615342974246
+
+
+*** Test performance of epoch 49 ***
+Test: Mean Reciprocal Rank: 0.3126806676178888
+Test: Recall@10: 0.45401396632923724
