@@ -157,3 +157,50 @@ If you make use of this code, the JODIE algorithm, the T-batch algorithm, or the
 	organization={ACM}
  }
 ```
+### Modified
+1. Replace RNNCELL with GRUCELL.
+  * Reasons:
+    * GRU can retain information from much earlier compared to RNN.
+    * Can solve the vanishing gradient problem.
+2. Replace the fully connected layer with a convolutional layer.
+  * Reasons:
+    * Convolutional layers reduce parameters by sharing weights.
+    * Convolutional layers preserve spatial structure for better feature extraction.
+3. Compare results of the original work and out variants:
+  * Interaction(Validation)
+	  <p align="center">
+	    <img src="result_graph/Interaction/Validation/MRR.png" alt="MRR" width="45%">
+	    <img src="result_graph/Interaction/Validation/Recall.png" alt="Recall" width="45%">
+	  </p>
+   
+    * Analysis:
+      1. MRR : For models other than CNN+GRU, the best result occurs at a learning rate of 0.005, followed by 0.001, and the worst at 0.01. However, for CNN+GRU, the performance decreases as the learning rate increases.
+      2. Recall@10 : For all models, performance declines as the learning rate increases. This is because a larger learning rate prevents the models from converging to a local minimum.
+      3. GRU : GRU performs slightly better compared to the other models.
+  
+  * Interaction(Test)
+	  <p align="center">
+	    <img src="result_graph/Interaction/Test/MRR.png" alt="MRR" width="45%">
+	    <img src="result_graph/Interaction/Test/Recall.png" alt="Recall" width="45%">
+	  </p>
+   
+    * Analysis:
+      1. MRR : For models other than CNN+GRU, the best result occurs at a learning rate of 0.005, followed by 0.001, and the worst at 0.01. However, for CNN+GRU, the performance decreases as the learning rate increases.
+      2. Recall@10 : For all models, performance declines as the learning rate increases. This is because a larger learning rate prevents the models from converging to a local minimum.
+      3. GRU : GRU performs slightly better compared to the other models.
+  
+  * User state(Validation)
+  	![Validation](result_graph/User_state/Validation/AUC.png)
+
+    * Analysis:
+      The four models show different trends as the learning rate increases. 
+
+  * User state(Test)
+  	![Test](result_graph/User_state/Test/AUC.png)
+
+    * Analysis:
+      The results of the original architecture worsen as the learning rate increases. The performance of CNN and GRU, however, is not affected by the learning rate. CNN+GRU achieves the best result at a learning rate of 0.005. Among all, the best result is from the original architecture with a learning rate of 0.001, where AUC = 0.795.
+
+
+  
+  
